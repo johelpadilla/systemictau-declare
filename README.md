@@ -1,6 +1,7 @@
 # systemictau-declare
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22237497.svg)](https://doi.org/10.5281/zenodo.22237497)
+[![PyPI](https://img.shields.io/pypi/v/systemictau-declare.svg)](https://pypi.org/project/systemictau-declare/)
 
 **Declare the time generator. Do not predict without controls.**
 

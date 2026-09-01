@@ -5,6 +5,7 @@
 - GitHub release for Zenodo archiving (hook enabled after v0.1.0).
 - Software paper and usage manual as PDF assets.
 - Zenodo version DOI: [10.5281/zenodo.22237497](https://doi.org/10.5281/zenodo.22237497) (concept [10.5281/zenodo.22237496](https://doi.org/10.5281/zenodo.22237496)).
+- PyPI: [systemictau-declare 0.1.1](https://pypi.org/project/systemictau-declare/).
 
 ## 0.1.0 — 2026-09-01
 
