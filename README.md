@@ -1,5 +1,7 @@
 # systemictau-declare
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22237497.svg)](https://doi.org/10.5281/zenodo.22237497)
+
 **Declare the time generator. Do not predict without controls.**
 
 `systemictau-declare` is a thin protocol layer on top of
@@ -81,6 +83,9 @@ The report is then marked **EXPLORATORY**. Weights cannot be `fit()`.
 ## Citation
 
 See `CITATION.cff` and the paper in `papers/`.
+
+- This version: [10.5281/zenodo.22237497](https://doi.org/10.5281/zenodo.22237497)
+- Concept DOI (all versions): [10.5281/zenodo.22237496](https://doi.org/10.5281/zenodo.22237496)
 
 ## License
 

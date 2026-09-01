@@ -122,6 +122,7 @@ If that sentence cannot be filled, the run is not yet a result.
 - Padilla-Villanueva, J. *Systemic Tau and Hierarchical Ordinal Conjunctions: A Relational Theory of Critical Transitions* (foundations manuscript, 2026).
 - `nested-recd` 0.2.x, DOI [10.5281/zenodo.21937204](https://doi.org/10.5281/zenodo.21937204).
 - `excess³` methods, DOI [10.5281/zenodo.21385937](https://doi.org/10.5281/zenodo.21385937).
+- `systemictau-declare` v0.1.1, DOI [10.5281/zenodo.22237497](https://doi.org/10.5281/zenodo.22237497) (concept [10.5281/zenodo.22237496](https://doi.org/10.5281/zenodo.22237496)).
 - Module CT, `systemic-tau-formal` v0.1.11, DOI [10.5281/zenodo.21581189](https://doi.org/10.5281/zenodo.21581189).
 - Scheffer, M. et al. (2009). Early-warning signals for critical transitions. *Nature*.
 - Bandt, C. & Pompe, B. (2002). Permutation entropy. *Phys. Rev. Lett.*
