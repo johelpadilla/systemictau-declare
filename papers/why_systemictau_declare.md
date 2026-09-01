@@ -5,7 +5,7 @@ Department of Environmental Health, University of Puerto Rico
 ORCID: [0000-0002-5797-6931](https://orcid.org/0000-0002-5797-6931)  
 <johelpadilla@gmail.com>
 
-Software paper, version 0.1.0 · 1 September 2026  
+Software paper, version 0.1.1 · 1 September 2026  
 Package: `systemictau-declare` · Protocol: `frozen_v1`
 
 ---

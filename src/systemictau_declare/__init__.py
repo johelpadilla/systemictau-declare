@@ -12,7 +12,7 @@ from .schema import DeclarationReport, Seal
 from .report import write_report, render_html
 from .fixtures import g0_independent_ar, coupled_logistic
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "Protocol",

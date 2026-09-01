@@ -2,7 +2,7 @@
 
 **Johel Padilla-Villanueva**  
 Universidad de Puerto Rico · ORCID 0000-0002-5797-6931  
-1 de septiembre de 2026 · software 0.1.0 · protocolo `frozen_v1`
+1 de septiembre de 2026 · software 0.1.1 · protocolo `frozen_v1`
 
 Este texto es la versión en español del paper de software
 [`why_systemictau_declare.md`](why_systemictau_declare.md). No es una

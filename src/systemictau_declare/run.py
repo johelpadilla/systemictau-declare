@@ -290,7 +290,7 @@ def declare(
     notes.extend(protocol.non_identification)
 
     versions = {
-        "systemictau_declare": "0.1.0",
+        "systemictau_declare": "0.1.1",
         "systemictau": st["version"],
         "nested_recd": nested["version"],
         "protocol_hash": protocol.yaml_hash,

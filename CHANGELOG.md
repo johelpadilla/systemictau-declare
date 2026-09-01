@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-09-01
+
+- GitHub release for Zenodo archiving (hook enabled after v0.1.0).
+- Software paper and usage manual as PDF assets.
+
 ## 0.1.0 — 2026-09-01
 
 - Initial companion package: `Protocol.frozen_v1`, `declare()`, FAR seal, CLI `recd-declare`.

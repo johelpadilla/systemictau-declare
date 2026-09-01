@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "systemictau-declare"
-version = "0.1.0"
+version = "0.1.1"
 description = "Frozen protocol layer that declares the time generator (t vs T_n) without predicting without controls"
 readme = "README.md"
 requires-python = ">=3.9"

@@ -1,4 +1,4 @@
-# Manual de uso — systemictau-declare 0.1.0
+# Manual de uso — systemictau-declare 0.1.1
 
 Este manual es el contrato operativo. Si un paso no está aquí, no forma
 parte de `frozen_v1`.
@@ -15,7 +15,7 @@ Compruebe las versiones:
 import systemictau, nested_recd, systemictau_declare
 print(systemictau.__version__)          # 4.6.x
 print(nested_recd.__version__)          # >= 0.2.0
-print(systemictau_declare.__version__)  # 0.1.0
+print(systemictau_declare.__version__)  # 0.1.1
 ```
 
 ## 2. Datos de entrada

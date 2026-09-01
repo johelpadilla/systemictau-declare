@@ -104,7 +104,7 @@ def render_html(rep: DeclarationReport) -> str:
 <body>
 <p class="mark">{html.escape(mark)}</p>
 <h1>Declaration of the time generator</h1>
-<p class="sub">systemictau-declare 0.1.0 · protocol hash <code>{html.escape(rep.protocol_hash[:16])}</code></p>
+<p class="sub">systemictau-declare 0.1.1 · protocol hash <code>{html.escape(rep.protocol_hash[:16])}</code></p>
 
 <div class="seal">
   <strong>FAR: {html.escape(seal.far)}</strong>
