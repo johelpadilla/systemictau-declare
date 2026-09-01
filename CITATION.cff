@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "systemictau-declare: a frozen protocol for declaring the time generator"
+message: If you use this software, please cite the software paper in papers/why_systemictau_declare.md
+type: software
+authors:
+  - family-names: Padilla-Villanueva
+    given-names: Johel
+    orcid: "https://orcid.org/0000-0002-5797-6931"
+    email: johelpadilla@gmail.com
+    affiliation: University of Puerto Rico
+version: 0.1.0
+date-released: "2026-09-01"
+license: MIT
+keywords:
+  - Systemic Tau
+  - RECD
+  - early-warning
+  - ordinal patterns
+  - protocol
+  - false-alarm rate

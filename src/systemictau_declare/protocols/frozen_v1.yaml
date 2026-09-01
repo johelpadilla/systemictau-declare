@@ -1,0 +1,52 @@
+# frozen_v1 — pinned operational contract for systemictau-declare
+# Changing any hashed field is a new protocol, not a silent upgrade.
+#
+# Epistemic labels
+#   [OPERATIONAL]  all numeric fields below
+#   [THEOREM]      none (this file is not Module CT)
+#   [CONJECTURE]   none
+#   [READING]      none
+#
+# Weights 0.6 / 0.4 are a priori. They are never fit() on a scientific dataset.
+
+name: frozen_v1
+version: "1.0.0"
+status: frozen
+
+window: 13
+stride: 1
+m: 3
+delay: 1
+d_persist: 4
+theta3: 0.08
+alpha_syn: 0.6
+alpha_surp: 0.4
+tau_st: 0.50
+tau_ch: 0.41
+delta_feigenbaum: 4.6692016091
+detector: abs_z_vs_basal
+basal_frac: 0.3
+contrast_frac: 0.3
+z_abs_threshold: 2.0
+surrogate: phase_shuffle
+B: 99
+surrogate_seed: 0
+rqa: core_hyper_only
+rqa_window: 25
+rqa_min_line: 2
+core_hyper_run: 7
+p_threshold: 0.05
+
+pins:
+  systemictau: ">=4.6.0,<5"
+  nested_recd: ">=0.2.0"
+  methods_doi: "10.5281/zenodo.21385937"
+  nested_recd_doi: "10.5281/zenodo.21937204"
+  module_ct: "systemic-tau-formal Module CT v0.1.11"
+  module_ct_doi: "10.5281/zenodo.21581189"
+
+non_identification:
+  - "Delta T_n (gate RECD) is not Delta excess3 (nested Level-3)."
+  - "Sigma_RECD is not Clausius / Schnakenberg entropy production (CT-4C open)."
+  - "Phi3 binary is not the primary Level-3 readout; excess3 continuous is."
+  - "Lead time is asserted in laboratory t, not identified with Delta T_n."

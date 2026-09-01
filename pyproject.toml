@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "systemictau-declare"
+version = "0.1.0"
+description = "Frozen protocol layer that declares the time generator (t vs T_n) without predicting without controls"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Johel Padilla-Villanueva", email = "johelpadilla@gmail.com" },
+]
+keywords = [
+    "RECD",
+    "Systemic Tau",
+    "early-warning",
+    "ordinal patterns",
+    "protocol",
+    "complex systems",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "numpy>=1.22",
+    "pyyaml>=6.0",
+    "systemictau>=4.6.0,<5",
+    "nested-recd>=0.2.0",
+]
+
+[project.optional-dependencies]
+report = ["matplotlib>=3.7"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+recd-declare = "systemictau_declare.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/johelpadilla/systemictau-declare"
+Documentation = "https://github.com/johelpadilla/systemictau-declare/blob/main/docs/MANUAL.md"
+Paper = "https://github.com/johelpadilla/systemictau-declare/blob/main/papers/why_systemictau_declare.md"
+Issues = "https://github.com/johelpadilla/systemictau-declare/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+systemictau_declare = ["py.typed", "protocols/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
