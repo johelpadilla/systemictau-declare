@@ -101,18 +101,9 @@ Runtime dependencies: `systemictau` (motor: `compute_taus`, `accumulate_time`, R
 
 The independent-AR fixture G0 is a negative control of the *software*: it must not produce `event_claimed=True`. It is not a proof that real series lack structure.
 
-## 6. Epistemic labels
+Feigenbaum \(\delta\) is the tick scale in `frozen_v1`, not a theorem of this repository. Theorems live in Module CT. CT-4C remains open and is cited as such.
 
-Every public object in this repository is one of:
-
-- **[OPERATIONAL]** — `frozen_v1` numbers, including Feigenbaum \(\delta\) as a tick scale.
-- **[THEOREM]** — none here. Theorems live in Module CT.
-- **[CONJECTURE]** — none here. CT-4C is cited as open.
-- **[READING]** — none here. Polo, Whitehead, and kairós are not imported.
-
-The point of the package is to make mixing those labels *harder*, not to settle ontology.
-
-## 7. How to cite, and what a citation means
+## 6. How to cite, and what a citation means
 
 Cite the software (this version) if you used `declare()` or `recd-declare` as the detector. Cite Module CT if you claim non-identity of \(T_n\) and \(t\) as a theorem. Cite the `excess³` methods DOI if you claim the hybrid proxy. Do not cite this package as evidence that a Holter series “proved extramental time”. The package cannot say that. Its most affirmative scientific sentence is:
 
@@ -120,7 +111,7 @@ Cite the software (this version) if you used `declare()` or `recd-declare` as th
 
 If that sentence cannot be filled, the run is not yet a result.
 
-## 8. Conclusion
+## 7. Conclusion
 
 `systemictau-declare` exists because a second time generator is only scientifically usable when the protocol that estimates it cannot quietly move, and when a missing control cannot be displayed as a detection. It is for declaring \(t\) versus \(T_n\), comparing relational and amplitude channels, and sealing FAR. It is not for prediction, ontology, or a fifth ecosystem. The rest of the programme — controlled Holter and dengue papers, CT-4C, studios — should call this API or explain why they will not.
 

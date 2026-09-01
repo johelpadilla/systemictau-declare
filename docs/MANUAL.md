@@ -42,11 +42,11 @@ assert P.weights == (0.6, 0.4)
 print(P.yaml_hash)
 ```
 
-| Campo | Valor | Etiqueta |
-|-------|-------|----------|
-| `window` | 13 | operacional |
-| `m` | 3 | operacional (Bandt–Pompe) |
-| `theta3` | 0.08 | operacional (binario \(\Phi_3\); la lectura primaria es continua) |
+| Campo | Valor | Notas |
+|-------|-------|-------|
+| `window` | 13 | ventana de Kendall por pares |
+| `m` | 3 | orden Bandt–Pompe |
+| `theta3` | 0.08 | umbral del indicador binario \(\Phi_3\); la lectura primaria es `excess3` continuo |
 | `alpha_syn`, `alpha_surp` | 0.6, 0.4 | a priori; nunca `fit()` |
 | `tau_st`, `tau_ch` | 0.50, 0.41 | bandas de la compuerta |
 | `detector` | `abs_z_vs_basal` | contraste vs primer 30 % |

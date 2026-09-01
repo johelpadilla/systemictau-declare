@@ -1,12 +1,6 @@
 # frozen_v1 — pinned operational contract for systemictau-declare
 # Changing any hashed field is a new protocol, not a silent upgrade.
 #
-# Epistemic labels
-#   [OPERATIONAL]  all numeric fields below
-#   [THEOREM]      none (this file is not Module CT)
-#   [CONJECTURE]   none
-#   [READING]      none
-#
 # Weights 0.6 / 0.4 are a priori. They are never fit() on a scientific dataset.
 
 name: frozen_v1

@@ -95,7 +95,7 @@ Eso es menos romántico que una ontología del persistir, y más útil. El
 persistir, Polo y Whitehead siguen siendo lectura. El paquete se niega a
 mezclarlos con el YAML.
 
-## En una frase
+## Cierre
 
 `systemictau-declare` existe para que “hay un segundo generador de tiempo”
 pueda afirmarse como **protocolo verificable**, no como literatura, y para
