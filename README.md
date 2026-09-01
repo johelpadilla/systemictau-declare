@@ -40,9 +40,9 @@ This package exists so that:
 3. **FAR is a seal**, not a footnote: `undefined` | `event-only` | `estimated`.
 4. **A one-page report** can be cited. Ontology, Polo, and crash buttons are out of scope.
 
-Read the software paper: [`papers/why_systemictau_declare.md`](papers/why_systemictau_declare.md)  
-(Español: [`papers/por_que_existe_systemictau_declare.md`](papers/por_que_existe_systemictau_declare.md))  
-Usage manual: [`docs/MANUAL.md`](docs/MANUAL.md)
+Read the software paper: [`papers/why_systemictau_declare.pdf`](papers/why_systemictau_declare.pdf)  
+(Español: [`papers/por_que_existe_systemictau_declare.pdf`](papers/por_que_existe_systemictau_declare.pdf))  
+Usage manual: [`docs/MANUAL.pdf`](docs/MANUAL.pdf)
 
 ## What this package is not
 
