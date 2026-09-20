@@ -8,13 +8,13 @@ authors:
     orcid: "https://orcid.org/0000-0002-5797-6931"
     email: johelpadilla@gmail.com
     affiliation: University of Puerto Rico
-version: 0.1.1
+version: 0.1.2
 date-released: "2026-09-01"
 license: MIT
 url: "https://doi.org/10.5281/zenodo.22237497"
 repository-code: "https://github.com/johelpadilla/systemictau-declare"
 identifiers:
-  - description: This version (v0.1.1)
+  - description: Archived version v0.1.1 (v0.1.2 reuses the concept DOI until the GitHub release is ingested)
     type: doi
     value: 10.5281/zenodo.22237497
   - description: All versions (concept DOI)

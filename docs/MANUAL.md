@@ -1,4 +1,4 @@
-# Manual de uso — systemictau-declare 0.1.1
+# Manual de uso — systemictau-declare 0.1.2
 
 Este manual es el contrato operativo. Si un paso no está aquí, no forma
 parte de `frozen_v1`.
@@ -12,11 +12,14 @@ python -m pip install "systemictau-declare[report]"
 Compruebe las versiones:
 
 ```python
-import systemictau, nested_recd, systemictau_declare
-print(systemictau.__version__)          # 4.6.x
+import nested_recd, systemictau_declare
+from systemictau_declare import declare, Protocol
 print(nested_recd.__version__)          # >= 0.2.0
-print(systemictau_declare.__version__)  # 0.1.1
+print(systemictau_declare.__version__)  # 0.1.2
 ```
+
+`import systemictau` can fail on PyPI 4.6.0 (`panel.py` uses `Union` without
+importing it). `declare()` still loads `systemictau.core` / `.recd` / `.layers`.
 
 ## 2. Datos de entrada
 

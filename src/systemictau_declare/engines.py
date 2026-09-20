@@ -5,6 +5,10 @@ This module does not reimplement Kendall τ, the RECD gate, or excess³.
 
 from __future__ import annotations
 
+import importlib.metadata
+import importlib.util
+import sys
+import types
 from typing import Tuple
 
 import numpy as np
@@ -18,22 +22,92 @@ _NR_ERR = (
     "Install with: pip install 'nested-recd>=0.2.0'"
 )
 
+# Explicit parameters of nested-recd 0.2.0's compute_recd_from_conjunctions.
+# That release forwards **alpha_kwargs into alpha_weights(); extra names such
+# as compute_res (added later, default False) therefore explode. declare()
+# never needs Res_pair.
+_NESTED_CONJUNCTION_KW = frozenset(
+    {
+        "tau_s",
+        "m",
+        "d",
+        "theta3",
+        "window_tau",
+        "lam_override",
+        "stride",
+        "alpha_syn",
+        "alpha_surp",
+    }
+)
 
-def require_systemictau():
+
+def call_compute_recd_from_conjunctions(fn, X, **kwargs):
+    """Call nested-recd with only the 0.2.0 explicit kwargs.
+
+    ``compute_res`` is dropped on purpose: 0.2.0 has no such argument
+    (it lands in **alpha_kwargs and alpha_weights() raises); 0.2.2+
+    defaults it to False.
+    """
+    filtered = {k: v for k, v in kwargs.items() if k in _NESTED_CONJUNCTION_KW}
+    return fn(X, **filtered)
+
+
+def _pkg_version(name: str) -> str:
     try:
-        import systemictau  # noqa: F401
-        from systemictau.core import compute_taus
-        from systemictau.layers import hyper_persistence, rolling_rqa
-        from systemictau.recd import accumulate_time, gate_function
-    except ImportError as exc:
-        raise ImportError(_ST_ERR) from exc
+        return importlib.metadata.version(name)
+    except importlib.metadata.PackageNotFoundError:
+        return "unknown"
+
+
+def _systemictau_from_submodules() -> dict:
+    """Load core / recd / layers without executing systemictau/__init__.py.
+
+    PyPI 4.6.0 imports panel.py at package import, and panel.py uses Union
+    without importing it. declare() only needs Kendall τ, the gate, and RQA.
+    """
+    spec = importlib.util.find_spec("systemictau")
+    if spec is None or not spec.submodule_search_locations:
+        raise ImportError(_ST_ERR)
+    for key in [k for k in sys.modules if k == "systemictau" or k.startswith("systemictau.")]:
+        del sys.modules[key]
+    stub = types.ModuleType("systemictau")
+    stub.__path__ = list(spec.submodule_search_locations)
+    stub.__package__ = "systemictau"
+    stub.__file__ = spec.origin
+    stub.__version__ = _pkg_version("systemictau")
+    sys.modules["systemictau"] = stub
+    from systemictau.core import compute_taus
+    from systemictau.layers import hyper_persistence, rolling_rqa
+    from systemictau.recd import accumulate_time, gate_function
+
     return {
         "compute_taus": compute_taus,
         "accumulate_time": accumulate_time,
         "gate_function": gate_function,
         "hyper_persistence": hyper_persistence,
         "rolling_rqa": rolling_rqa,
-        "version": getattr(systemictau, "__version__", "unknown"),
+        "version": stub.__version__,
+    }
+
+
+def require_systemictau():
+    try:
+        from systemictau.core import compute_taus
+        from systemictau.layers import hyper_persistence, rolling_rqa
+        from systemictau.recd import accumulate_time, gate_function
+        import systemictau as st_mod
+    except Exception:
+        try:
+            return _systemictau_from_submodules()
+        except Exception as exc:
+            raise ImportError(_ST_ERR) from exc
+    return {
+        "compute_taus": compute_taus,
+        "accumulate_time": accumulate_time,
+        "gate_function": gate_function,
+        "hyper_persistence": hyper_persistence,
+        "rolling_rqa": rolling_rqa,
+        "version": getattr(st_mod, "__version__", _pkg_version("systemictau")),
     }
 
 
@@ -51,7 +125,7 @@ def require_nested_recd():
         "compute_recd_from_conjunctions": compute_recd_from_conjunctions,
         "phase_shuffle_independent": phase_shuffle_independent,
         "random_permutation_independent": random_permutation_independent,
-        "version": getattr(nested_recd, "__version__", "unknown"),
+        "version": getattr(nested_recd, "__version__", _pkg_version("nested-recd")),
     }
 
 

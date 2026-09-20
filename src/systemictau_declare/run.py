@@ -11,6 +11,7 @@ from typing import Optional, Sequence, Union
 import numpy as np
 
 from .engines import (
+    call_compute_recd_from_conjunctions,
     pad_to,
     regime_labels,
     require_nested_recd,
@@ -99,7 +100,8 @@ def _surrogate_one(X: np.ndarray, method: str, seed: int, nested) -> np.ndarray:
 def _tau_and_nested(X, protocol, st, nested):
     taus, _ = st["compute_taus"](X, window_size=protocol.window, stride=protocol.stride)
     T_n, dtk, g, depth = st["accumulate_time"](taus, window_size=protocol.window)
-    nested_out = nested["compute_recd_from_conjunctions"](
+    nested_out = call_compute_recd_from_conjunctions(
+        nested["compute_recd_from_conjunctions"],
         X,
         tau_s=taus,
         m=protocol.m,
@@ -109,7 +111,6 @@ def _tau_and_nested(X, protocol, st, nested):
         stride=protocol.stride,
         alpha_syn=protocol.alpha_syn,
         alpha_surp=protocol.alpha_surp,
-        compute_res=False,
     )
     return taus, T_n, dtk, g, depth, nested_out
 
@@ -290,7 +291,7 @@ def declare(
     notes.extend(protocol.non_identification)
 
     versions = {
-        "systemictau_declare": "0.1.1",
+        "systemictau_declare": "0.1.2",
         "systemictau": st["version"],
         "nested_recd": nested["version"],
         "protocol_hash": protocol.yaml_hash,

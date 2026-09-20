@@ -63,7 +63,10 @@ python -m pip install "systemictau-declare[report]"
 python -m pip install -e ".[report,dev]"
 ```
 
-Requires `systemictau>=4.6.0,<5` and `nested-recd>=0.2.0`.
+Requires `systemictau>=4.6.0,<5` and `nested-recd>=0.2.0`. Version 0.1.2
+starts against those pins as published on PyPI (nested-recd 0.2.0 does not
+accept `compute_res`; systemictau 4.6.0's `import systemictau` is broken and
+is bypassed).
 
 ## Minimal example
 
