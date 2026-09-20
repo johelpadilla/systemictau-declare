@@ -11,12 +11,12 @@ authors:
 version: 0.1.2
 date-released: "2026-09-01"
 license: MIT
-url: "https://doi.org/10.5281/zenodo.22237497"
+url: "https://doi.org/10.5281/zenodo.22863167"
 repository-code: "https://github.com/johelpadilla/systemictau-declare"
 identifiers:
-  - description: Archived version v0.1.1 (v0.1.2 reuses the concept DOI until the GitHub release is ingested)
+  - description: This version (v0.1.2)
     type: doi
-    value: 10.5281/zenodo.22237497
+    value: 10.5281/zenodo.22863167
   - description: All versions (concept DOI)
     type: doi
     value: 10.5281/zenodo.22237496

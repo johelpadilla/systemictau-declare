@@ -7,6 +7,7 @@ Cold-install fix against the pins in `frozen_v1` (`systemictau>=4.6.0,<5`, `nest
 - Stop passing `compute_res=False` into `compute_recd_from_conjunctions`. On nested-recd 0.2.0 that kwarg is swallowed by `**alpha_kwargs` and `alpha_weights()` raises; 0.2.2+ already defaults it to False. `declare()` does not use Res_pair.
 - Load `systemictau.core` / `.recd` / `.layers` even if `import systemictau` fails (PyPI 4.6.0 `panel.py` uses `Union` without importing it).
 - GitHub Actions workflow `.github/workflows/publish.yml` publishes to PyPI with Trusted Publishing (OIDC, no API token).
+- Zenodo version DOI: [10.5281/zenodo.22863167](https://doi.org/10.5281/zenodo.22863167) (concept [10.5281/zenodo.22237496](https://doi.org/10.5281/zenodo.22237496)).
 
 ## 0.1.1 — 2026-09-01
 
