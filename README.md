@@ -88,7 +88,7 @@ The report is then marked **EXPLORATORY**. Weights cannot be `fit()`.
 
 See `CITATION.cff` and the paper in `papers/`.
 
-- This version: [10.5281/zenodo.22237497](https://doi.org/10.5281/zenodo.22237497)
+- This version: [10.5281/zenodo.22863167](https://doi.org/10.5281/zenodo.22863167)
 - Concept DOI (all versions): [10.5281/zenodo.22237496](https://doi.org/10.5281/zenodo.22237496)
 
 ## License
