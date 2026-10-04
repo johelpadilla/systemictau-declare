@@ -48,8 +48,8 @@ recd-declare = "systemictau_declare.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/johelpadilla/systemictau-declare"
-Documentation = "https://github.com/johelpadilla/systemictau-declare/blob/main/docs/MANUAL.md"
-Paper = "https://github.com/johelpadilla/systemictau-declare/blob/main/papers/why_systemictau_declare.md"
+Documentation = "https://github.com/johelpadilla/systemictau-declare/blob/master/docs/MANUAL.md"
+Paper = "https://github.com/johelpadilla/systemictau-declare/blob/master/papers/why_systemictau_declare.md"
 Issues = "https://github.com/johelpadilla/systemictau-declare/issues"
 
 [tool.setuptools.packages.find]
