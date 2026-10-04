@@ -7,11 +7,12 @@ authors:
     given-names: Johel
     orcid: "https://orcid.org/0000-0002-5797-6931"
     email: johelpadilla@gmail.com
-    affiliation: University of Puerto Rico
+    affiliation: "University of Puerto Rico, Medical Sciences Campus"
 version: 0.1.2
-date-released: "2026-09-01"
+date-released: "2026-09-20"
 license: MIT
-url: "https://doi.org/10.5281/zenodo.22863167"
+doi: 10.5281/zenodo.22237496
+url: "https://doi.org/10.5281/zenodo.22237496"
 repository-code: "https://github.com/johelpadilla/systemictau-declare"
 identifiers:
   - description: This version (v0.1.2)
